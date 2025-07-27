@@ -2516,6 +2516,18 @@ var gear = {
       "id": 55532
     },
     {
+      "name": "Ravenkeeper’s Frenzied Embrace",
+      "source": "UpperKara",
+      "ac": 253,
+      "str": 20,
+      "agi": 45,
+      "haste": 2,
+      "phase": 7,
+      "q": 4,
+      "i": 88,
+      "id": 55079
+    },
+    {
       "name": "Centaur Battle Harness",
       "source": "Crafting",
       "str": 5,

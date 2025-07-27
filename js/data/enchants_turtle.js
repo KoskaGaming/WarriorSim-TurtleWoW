@@ -780,6 +780,12 @@ var enchant = {
          "phase": 7,
       },
       {
+         "id": 61784, //wrong id, need updating when db updated
+         "name": "Obsidian",
+         "str": 10,
+         "phase": 7,
+      },
+      {
          "id": 0,
          "name": "No Enchant",
          "phase": 1
