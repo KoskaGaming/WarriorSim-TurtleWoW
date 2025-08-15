@@ -187,25 +187,16 @@ class Execute extends Spell {
     // more info in procattack()
     constructor(player, id) {
         super(player, id);
-        if (this.player.mode == "turtle")
-            this.cost = 15;
-        else
-            this.cost = 15 - player.talents.executecost - player.ragecostbonus;
-
+        this.cost = 15 - player.talents.executecost - player.ragecostbonus;
         this.dumpmod = player.talents.preccut ? 1 + (player.talents.preccut / 100) : 1;
         this.usedrage = 0;
         this.totalusedrage = 0;
         this.refund = false;
         this.weaponspell = false;
-        if (this.player.mode == "turtle") {
-            this.cooldown = 5.5;
-            if (this.player.talents.recklessexecute == 1) this.cooldown = 3.5;
-            if (this.player.talents.recklessexecute == 2) this.cooldown = 0;
-        }
     }
     dmg() {
         let dmg;
-        dmg = this.value1 + (this.value2 * this.usedrage * this.dumpmod);
+        dmg = (this.value1 * this.dumpmod) + (this.value2 * this.usedrage);
         return dmg * this.player.stats.dmgmod;
     }
     use(delayedheroic) {
@@ -534,11 +525,38 @@ class RagingBlow extends Spell {
     }
 }
 
+class MasterStrike extends Spell {
+    constructor(player, id) {
+        super(player, id, 'Master Strike');
+        this.cost = 20;
+        this.cooldown = 30;
+    }
+    dmg(weapon) {
+        if (!weapon) weapon = this.player.mh;
+        let dmg;
+        dmg = rng(weapon.mindmg + weapon.bonusdmg, weapon.maxdmg + weapon.bonusdmg);
+        dmg += (this.player.stats.ap / 14) * weapon.speed + this.player.stats.moddmgdone;
+        return dmg * this.player.stats.dmgmod * 0.35;
+    }
+    use() {
+        this.player.rage -= this.cost;
+        this.player.timer = 1500;
+        this.timer = this.cooldown * 1000;
+    }
+    canUse() {
+        return !this.timer && !this.player.timer && (this.cost <= this.player.rage) &&
+            (!this.minrage || this.player.rage >= this.minrage) &&
+            (!this.maincd ||
+                (this.player.spells.bloodthirst && this.player.spells.bloodthirst.timer >= this.maincd) ||
+                (this.player.spells.mortalstrike && this.player.spells.mortalstrike.timer >= this.maincd));
+    }
+}
+
 class BerserkerRage extends Spell {
     constructor(player, id) {
         super(player, id);
         this.cost = 0;
-        this.rage = player.talents.berserkerbonus ? player.talents.berserkerbonus : 0; // fucks up cc2 sim cause talent removed
+        this.rage = player.talents.berserkerbonus; 
         this.cooldown = 30;
         this.useonly = true;
         this.offensive = false;

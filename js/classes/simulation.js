@@ -595,6 +595,7 @@ class Simulation {
             if (player.spells.bloodrage && player.spells.bloodrage.timer && player.spells.bloodrage.timer < next) next = player.spells.bloodrage.timer;
             if (player.spells.ragepotion && player.spells.ragepotion.timer && player.spells.ragepotion.timer < next) next = player.spells.ragepotion.timer;
             if (player.spells.overpower && player.spells.overpower.timer && player.spells.overpower.timer < next) next = player.spells.overpower.timer;
+            if (player.spells.masterstrike && player.spells.masterstrike.timer && player.spells.masterstrike.timer < next) next = player.spells.masterstrike.timer;
             if (player.spells.execute && player.spells.execute.timer && player.spells.execute.timer < next) next = player.spells.execute.timer;
             if (player.spells.slam && player.spells.slam.timer && player.spells.slam.timer < next) next = player.spells.slam.timer;
 
@@ -648,6 +649,7 @@ class Simulation {
             if (player.spells.bloodrage && player.spells.bloodrage.timer && !player.spells.bloodrage.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.ragepotion && player.spells.ragepotion.timer && !player.spells.ragepotion.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.overpower && player.spells.overpower.timer && !player.spells.overpower.step(next) && !player.spelldelay) spellcheck = true;
+            if (player.spells.masterstrike && player.spells.masterstrike.timer && !player.spells.masterstrike.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.execute && player.spells.execute.timer && !player.spells.execute.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.hamstring && player.spells.hamstring.timer && !player.spells.hamstring.step(next) && !player.spelldelay) spellcheck = true;
             if (player.spells.pummel && player.spells.pummel.timer && !player.spells.pummel.step(next) && !player.spelldelay) spellcheck = true;

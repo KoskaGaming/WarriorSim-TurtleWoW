@@ -138,7 +138,7 @@ var talents = [
                'Increases the critical strike chance of your Overpower ability by 25%.',
                'Increases the critical strike chance of your Overpower ability by 50%.'
             ],
-            x: 0,
+            x: 1,
             y: 2,
             c: 0,
             iconname: 'INV_Sword_05',
@@ -146,23 +146,24 @@ var talents = [
          },
          {
             i: 137,
-            n: 'Counterattack',
+            n: 'Master Strike',
             m: 1,
             s: [
-               12296
+               12296 //counterattack spell id, change with db update
             ],
             d: [
-               'Increases the time required for your rage to decay while out of combat by 30%.'
+               '35% weapon damage plus special based on weapon type'
             ],
-            x: 1,
+            x: 0,
             y: 2,
             r: [
                4,
                5
             ],
             c: 0,
-            iconname: 'ability_warrior_riposte',
-            aura: function (count) { return { counterattack: count } },
+            enable: 118000, //fix id when db is updated
+            iconname: "Inv_sword_1h_pvpdraenors2_d_02",
+            aura: function (count) { return { masterstrike: count } },
          },
          {
             i: 121,
@@ -293,7 +294,7 @@ var talents = [
             y: 4,
             c: 0,
             iconname: 'ability_hunter_swiftstrike',
-            aura: function (count) { return { preccut: count * 20 } },
+            aura: function (count) { return { preccut: count * 15 } },
          },
          {
             i: 168,
@@ -313,8 +314,8 @@ var talents = [
                'Decreases the casting time of your Slam ability by 0.4 sec.',
                'Decreases the casting time of your Slam ability by 0.5 sec.'
             ],
-            x: 3,
-            y: 4,
+            x: 0,
+            y: 5,
             c: 0,
             iconname: 'Ability_Warrior_DecisiveStrike',
             aura: function (count) { return { impslam: count * 2.5 } }, // cc2 talent is 2.5x better than 1.12 version
@@ -333,8 +334,8 @@ var talents = [
                'Reduces the cooldown of your Retaliation, Recklessness and Shield Wall abilities by 8 min.',
                'Reduces the cooldown of your Retaliation, Recklessness and Shield Wall abilities by 12 min.'
             ],
-            x: 0,
-            y: 5,
+            x: 3,
+            y: 4,
             c: 0,
             iconname: 'Ability_Warrior_Improveddisciplines',
             aura: function (count) { return { impdisc: count } },
@@ -587,21 +588,21 @@ var talents = [
          },
          {
             i: 1542,
-            n: 'Reckless Execute',
+            n: 'Improved Execute',
             m: 2,
             s: [
                20502,
                20503
             ],
             d: [
-               'Reduces the Cooldown of your Execute ability by 2 seconds.',
-               'Reduces the Cooldown of your Execute ability by 4 seconds.'
+               'Reduces the Rage cost of your Execute ability by 2.',
+               'Reduces the Rage cost of your Execute ability by 5.'
             ],
-            x: 1,
-            y: 3,
+            x: 3,
+            y: 4,
             c: 0,
             iconname: 'INV_Sword_48',
-            aura: function (count) { return {recklessexecute: count} },
+            aura: function (count) { return { executecost: count == 2 ? 5 : count * 2 } },
          },
          {
             i: 155,
@@ -676,20 +677,20 @@ var talents = [
                'Reduces the cooldown of your Intercept ability by 5 sec.',
                'Reduces the cooldown of your Intercept ability by 10 sec.'
             ],
-            x: 3,
-            y: 4,
+            x: 1,
+            y: 3,
             c: 0,
             iconname: 'Ability_Rogue_Sprint',
             aura: function (count) { return { impintercept: count * 5 } },
          },
          {
-            i: 1541,
+            i: 1542,
             n: 'Blooddrinker',
             m: 3,
             s: [
-               20500,
-               20501,
-               20502,
+               21506, //fix ID when db is updated
+               21507,
+               21508,
             ],
             d: [
                'The Berserker Rage ability will generate 5 rage when used.',
@@ -728,6 +729,24 @@ var talents = [
             c: 0,
             iconname: 'Ability_GhoulFrenzy',
             aura: function (count) { return { flurry: count == 0 ? 0 : 5 + count * 5 } },
+         },
+         {
+            i: 1541,
+            n: 'Improved Berserker Rage',
+            m: 2,
+            s: [
+               20500,
+               20501
+            ],
+            d: [
+               'Berserker rage will generate 5 rage and 50% chance to break movement impairing effects',
+               'Berserker rage will generate 10 rage and 50% chance to break movement impairing effects'
+            ],
+            x: 0,
+            y: 5,
+            c: 0,
+            iconname: 'spell_nature_ancestralguardian',
+            aura: function (count) { return { berserkerbonus: count * 5 } },
          },
          {
             i: 167,
@@ -816,7 +835,7 @@ var talents = [
                'Increases the instant Rage generated by your Bloodrage ability by 5.'
             ],
             x: 0,
-            y: 1,
+            y: 0,
             c: 0,
             iconname: 'Ability_Racial_BloodRage',
             aura: function (count) { return { bloodragebonus: count == 2 ? 5 : count * 2 } },
@@ -863,7 +882,7 @@ var talents = [
                'Increases your chance to resist Stun and Charm effects by an additional 12%.',
                'Increases your chance to resist Stun and Charm effects by an additional 15%.'
             ],
-            x: 3,
+            x: 1,
             y: 1,
             c: 0,
             iconname: 'Spell_Magic_MageArmor',

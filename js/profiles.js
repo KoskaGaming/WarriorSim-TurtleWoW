@@ -228,14 +228,11 @@ SIM.PROFILES = {
             <div class="import-profile">${svgImport}<p>Import Profile</p></div>
             </div>`);
 
-        if (mode == "sod") {
+        if (mode == "turtle") {
             view.presets.empty();
             view.presets.append(`
                 <label>Presets:</label>
-                <div class="import-th">P5 2H Fury</div>
-                <div class="import-dw">P5 DW Fury</div>
-                <div class="import-thmc">Pre-BWL 2H Fury</div>
-                <div class="import-dwmc">Pre-BWL DW Fury</div>`);
+                <div class="import-th">Fury Bis vs Boss (60 sec, Single Target)</div>`); //add additional presets here
         }
             
         },
