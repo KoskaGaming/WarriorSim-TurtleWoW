@@ -149,7 +149,7 @@ var talents = [
             n: 'Master Strike',
             m: 1,
             s: [
-               12296 //counterattack spell id, change with db update
+               54023
             ],
             d: [
                '35% weapon damage plus special based on weapon type'
@@ -161,7 +161,7 @@ var talents = [
                5
             ],
             c: 0,
-            enable: 118000, //fix id when db is updated
+            enable: 54023,
             iconname: "Inv_sword_1h_pvpdraenors2_d_02",
             aura: function (count) { return { masterstrike: count } },
          },
@@ -616,17 +616,17 @@ var talents = [
                13048
             ],
             d: [
-               'Gives you a 3% melee damage bonus for 12 sec up to a maximum of 12 swings after being the victim of a critical strike.',
-               'Gives you a 6% melee damage bonus for 12 sec up to a maximum of 12 swings after being the victim of a critical strike.',
-               'Gives you a 9% melee damage bonus for 12 sec up to a maximum of 12 swings after being the victim of a critical strike.',
+               'Gives you a 4% melee damage bonus for 12 sec up to a maximum of 12 swings after being the victim of a critical strike.',
+               'Gives you a 8% melee damage bonus for 12 sec up to a maximum of 12 swings after being the victim of a critical strike.',
                'Gives you a 12% melee damage bonus for 12 sec up to a maximum of 12 swings after being the victim of a critical strike.',
-               'Gives you a 15% melee damage bonus for 12 sec up to a maximum of 12 swings after being the victim of a critical strike.'
+               'Gives you a 16% melee damage bonus for 12 sec up to a maximum of 12 swings after being the victim of a critical strike.',
+               'Gives you a 20% melee damage bonus for 12 sec up to a maximum of 12 swings after being the victim of a critical strike.'
             ],
             x: 2,
             y: 3,
             c: 0,
             iconname: 'Spell_Shadow_UnholyFrenzy',
-            aura: function (count) { return { enrage: count * 3 } },
+            aura: function (count) { return { enrage: count * 4 } },
          },
          {
             i: 168,

@@ -3407,3 +3407,58 @@ class Shieldrender extends Aura {
         }
     }
 }
+
+class MoltenEmberstone extends Aura {
+    constructor(player, id) {
+        super(player, id);
+        this.duration = 20;
+        this.stats = {ap: 200};
+        this.cooldown = 120;
+    }
+    use(a, prepull = 0) {
+        this.player.itemtimer = this.duration * 1000 - prepull;
+        this.timer = step + this.duration * 1000 - prepull;
+        this.starttimer = step - prepull;
+        this.player.updateAP();
+        /* start-log */ if (this.player.logging) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    canUse() {
+        return !this.timer && !this.player.itemtimer && step >= this.usestep;
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.usestep = this.starttimer + (this.cooldown *1000);
+            this.player.updateAP();
+            /* start-log */ if (this.player.logging) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+}
+
+
+class Modrag extends Aura {
+    constructor(player, id) {
+        super(player, id);
+        this.duration = 8;
+        this.stats = { moddmgdone: 12 };
+        this.name = "Rage of the Mountain";
+    }
+use() {
+        if (this.timer) this.uptime += (step - this.starttimer);
+        this.timer = step + this.duration * 1000;
+        this.starttimer = step;
+        this.player.updateBonusDmg();
+        this.player.extraattacks++;
+        /* start-log */ if (this.player.logging) this.player.log(`${this.name} applied`); /* end-log */
+    }
+    step() {
+        if (step >= this.timer) {
+            this.uptime += (this.timer - this.starttimer);
+            this.timer = 0;
+            this.player.updateBonusDmg();
+            /* start-log */ if (this.player.logging) this.player.log(`${this.name} removed`); /* end-log */
+        }
+    }
+}
+

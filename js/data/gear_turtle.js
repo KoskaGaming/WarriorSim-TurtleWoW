@@ -1410,7 +1410,7 @@ var gear = {
     {
       "name": "Fireguard Shoulders",
       "source": "MC",
-      "ac": 159,
+      "ac": 217,
       "sta": 22,
       "subsource": "fire",
       "resist": {
@@ -2046,6 +2046,10 @@ var gear = {
       "str": 11,
       "agi": 11,
       "haste": 1,
+      "proc": {
+        "chance": 1,
+        "extra": 1
+      },
       "ac": 50,
       "source": "Other",
       "phase": 7,
@@ -2366,10 +2370,9 @@ var gear = {
       "id": 22712
     },
     {
-      "name": "Shifting Cloak",
+      "name": "Shifting Cloak", //missing dodge proc effect
       "sta": 8,
       "agi": 17,
-      "dodge": 1,
       "ac": 48,
       "source": "Crafting",
       "q": 4,
@@ -3785,8 +3788,8 @@ var gear = {
     {
       "name": "Wristguards of Stability",
       "str": 24,
-      "sta": 8,
-      "ac": 86,
+      "sta": 11,
+      "ac": 88,
       "source": "MC",
       "phase": 1,
       "q": 4,
@@ -4386,7 +4389,7 @@ var gear = {
       "crit": 1,
       "sta": 6,
       "ap": 54,
-      "ac": 488, //lowered, not sure to what
+      "ac": 275,
       "skill": 7,
       "type": "2H Axe",
       "source": "MC",
@@ -4607,7 +4610,24 @@ var gear = {
       "q": 4,
       "i": 42,
       "id": 867
-    }
+    },
+    {
+      "name": "Grasps of Sundering Power",
+      "agi": 15,
+      "sta": 16,
+      "str": 16,
+      "defense": 5,
+      "ac": 468,
+      "resist": {
+        "fire": 7
+      },
+      "source": "MC",
+      "phase": "1",
+      "q": 4,
+      "i": 66,
+      "id": 58210
+    },
+
   ],
   "waist": [
     {
@@ -6224,7 +6244,7 @@ var gear = {
       "i": 86,
       "id": 47268
     },
-	{
+	 {
       "name": "Greaves of the Brotherhood",
       "str": 29,
       "sta": 24,
@@ -6847,6 +6867,35 @@ var gear = {
       "q": 3,
       "i": 57,
       "id": 11731
+    },
+    {
+      "name": "Treads of Scalding Rage",
+      "sta": 15,
+      "crit": 1,
+      "str": 20,
+      "ac": 138,
+      "resist": {
+        "fire": 14
+      },
+      "source": "MC",
+      "phase": 1,
+      "q": 4,
+      "i": 66,
+      "id": 58212
+    },
+    {
+      "name": "Ash-Forged Greaves",
+      "sta": 7,
+      "str": 16,
+      "agi": 15,
+      "ac": 502,
+      "skill": 5,
+      "type": "2H Sword",
+      "source": "MC",
+      "phase": 1,
+      "q": 4,
+      "i": 66,
+      "id": 58215
     }
   ],
   "finger1": [
@@ -8148,7 +8197,15 @@ var gear = {
       "q": 3,
       "i": 68,
       "id": 61263
-    }
+    },
+    {
+      "name": "Molten Emberstone (Used last 20 secs)",
+      "source": "MC",
+      "phase": "1",
+      "q": 4,
+      "i": 66,
+      "id": 58211
+    },
 
   ],
   "trinket2": [
@@ -8474,7 +8531,15 @@ var gear = {
       "q": 3,
       "i": 68,
       "id": 61263
-    }
+    },
+    {
+      "name": "Molten Emberstone (Used last 20 secs)",
+      "source": "MC",
+      "phase": "1",
+      "q": 4,
+      "i": 66,
+      "id": 58211
+    },
   ],
   "ranged": [
     {
@@ -8921,6 +8986,16 @@ var gear = {
       "q": 3,
       "i": 61,
       "id": 13380
+    },
+    {
+      "name": "Overheated Skyrazors",
+      "haste": 1,
+      "dodge": 1,
+      "source": "MC",
+      "phase": "1",
+      "q": 4,
+      "i": 66,
+      "id": 58239
     }
   ],
   "mainhand": [
@@ -9204,7 +9279,7 @@ var gear = {
       "i": 68,
       "id": 83564,
       "proc": {
-        "ppm": 0.6,
+        "ppm": 0.4,
         "spell": "Tempest"
       }
     },
@@ -9889,9 +9964,9 @@ var gear = {
       "name": "Core Hound Tooth",
       "crit": 1,
       "sta": 9,
-      "ap": 20,
-      "mindmg": 57,
-      "maxdmg": 107,
+      "ap": 22,
+      "mindmg": 59,
+      "maxdmg": 109,
       "speed": 1.6,
       "type": "Dagger",
       "source": "MC",
@@ -11097,9 +11172,39 @@ var gear = {
       "q": 4,
       "i": 88,
       "id": 55276
+    },
+    {
+      "name": "Modrag'zan, Heart of the Mountain",
+      "mindmg": 94,
+      "maxdmg": 175,
+      "speed": 2.8,
+      "proc": {
+        "ppm": 1,
+        "spell": "Modrag",
+      },
+      "type": "Mace",
+      "source": "MC",
+      "phase": 1,
+      "q": 4,
+      "i": 66,
+      "id": 58214
     }
   ],
   "offhand": [
+    {
+      "name": "Fist of the Flamewaker",
+      "offhand": true,
+      "agi": 16,
+      "mindmg": 50,
+      "maxdmg": 94,
+      "speed": 1.5,
+      "type": "Fist",
+      "source": "MC",
+      "phase": 1,
+      "q": 4,
+      "i": 66,
+      "id": 58207
+    },
     {
       "name": "Silithid Claw",
       "offhand": true,
@@ -12863,6 +12968,22 @@ var gear = {
         "ppm": 1,
         "spell": "Rivenspike"
       }
+    },
+    {
+      "name": "Modrag'zan, Heart of the Mountain",
+      "mindmg": 94,
+      "maxdmg": 175,
+      "speed": 2.8,
+      "proc": {
+        "ppm": 1,
+        "spell": "Modrag",
+      },
+      "type": "Mace",
+      "source": "MC",
+      "phase": 1,
+      "q": 4,
+      "i": 66,
+      "id": 58214
     }
   ],
   "twohand": [
@@ -13548,9 +13669,9 @@ var gear = {
     },
     {
       "name": "Spinal Reaper",
-      "ap": 34,
-      "mindmg": 203,
-      "maxdmg": 305,
+      "ap": 36,
+      "mindmg": 206,
+      "maxdmg": 310,
       "speed": 3.4,
       "id": 17104,
       "source": "MC",

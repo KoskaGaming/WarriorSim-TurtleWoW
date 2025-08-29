@@ -376,6 +376,7 @@ class Simulation {
                     else if (player.auras.spider && player.auras.spider.canUse()) { player.spelldelay = 1; delayedspell = player.auras.spider; }
                     else if (player.auras.gabbar && player.auras.gabbar.canUse()) { player.spelldelay = 1; delayedspell = player.auras.gabbar; }
                     else if (player.auras.earthstrike && player.auras.earthstrike.canUse()) { player.spelldelay = 1; delayedspell = player.auras.earthstrike; }
+                    else if (player.auras.moltenemberstone && player.auras.moltenemberstone.canUse()) { player.spelldelay = 1; delayedspell = player.auras.moltenemberstone; }
                     else if (player.auras.roarguardian && player.auras.roarguardian.canUse()) { player.spelldelay = 1; delayedspell = player.auras.roarguardian; }
                     else if (player.auras.zandalarian && player.auras.zandalarian.canUse()) { player.spelldelay = 1; delayedspell = player.auras.zandalarian; }
                     else if (player.auras.relentlessstrength && player.auras.relentlessstrength.canUse()) { player.spelldelay = 1; delayedspell = player.auras.relentlessstrength; }

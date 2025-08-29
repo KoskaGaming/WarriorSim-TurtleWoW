@@ -232,7 +232,7 @@ SIM.PROFILES = {
             view.presets.empty();
             view.presets.append(`
                 <label>Presets:</label>
-                <div class="import-th">Fury Bis vs Boss (60 sec, Single Target)</div>`); //add additional presets here
+                <div class="import-th">DW Fury Bis vs Boss (60 sec, Single Target)</div>`); //add additional presets here
         }
             
         },

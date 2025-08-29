@@ -152,12 +152,14 @@ var buffs = [
       minlevel: 40,
    },
    {
-      id: 45851,
+      id: 45565,
       spellid: true,
-      name: "Moonclaw",
-      iconname: "inv_misc_monsterclaw_04",
+      name: "Champion",
+      iconname: "spell_holy_empowerchampion",
       group: "",
-      crit: 1,
+      other: true,
+      dmgmod: 5,
+      spelldmgmod: 5,
       minlevel: 60,
    },
    {

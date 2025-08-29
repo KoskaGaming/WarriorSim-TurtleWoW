@@ -1266,10 +1266,10 @@ var spells = [
     expriority: 0,
 },
 {
-    id: 118000, //fix id when available
+    id: 54023,
     name: 'Master Strike',
     classname: 'MasterStrike',
-    iconname: 'Inv_sword_1h_pvpdraenors2_d_02', //and icon
+    iconname: 'Inv_sword_1h_pvpdraenors2_d_02', //fix icon
     minrage: 30,
     minrageactive: false,
     value1: 35,
@@ -1666,6 +1666,18 @@ var spells = [
     active: false,
     aura: true,
     buff: true,
+},
+{
+    id: 58211,
+    name: 'Molten Emberstone',
+    classname: 'MoltenEmberstone',
+    iconname: 'INV_Misc_Gem_Ruby_01',
+    item: true,
+    aura: true,
+    timetoend: 20,
+    timetoendactive: false,
+    timetostart: 0,
+    timetostartactive: false,
 },
 
 

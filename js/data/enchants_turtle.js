@@ -780,7 +780,7 @@ var enchant = {
          "phase": 7,
       },
       {
-         "id": 61784, //wrong id, need updating when db updated
+         "id": 103, 
          "name": "Obsidian",
          "str": 10,
          "phase": 7,
@@ -1229,7 +1229,7 @@ var sets = [
       ]
    },
    {
-      id: 1003,
+      id: 673,
       name: 'Armor of Might',
       items: [47240,47241,47242,47243,47244,47245,47246,47247],
       bonus: [
@@ -1239,7 +1239,7 @@ var sets = [
       ]
    },
    {
-      id: 2003,
+      id: 674,
       name: 'Armor of Wrath',
       items: [47248,47249,47250,47251,47252,47253,47254,47255],
       bonus: [
@@ -1248,7 +1248,7 @@ var sets = [
       ]
    },
       {
-      id: 3002,
+      id: 676,
       name: 'Armor of the Dreadnaught',
       items: [47261,47262,47263,47264,47265,47266,47267,47268,47269],
       bonus: [
@@ -1256,7 +1256,7 @@ var sets = [
       ]
    },
    {
-      id: 3502,
+      id: 691,
       name: 'Battlegear of the Brotherhood',
       items: [47270,47271,47272,47273,47274,47275],
       bonus: [
@@ -1264,11 +1264,19 @@ var sets = [
       ]
    },
    {
-      id: 999,
+      id: 640,
       name: 'Dreadslayer\'s Rampage',
       items: [55113,55114,55108], //55114 is demonsslayer helm #2 false id to avoid conflict
       bonus: [
          { count: 2, stats: { arp: 150 } }
+      ]
+   },
+      {
+      id: 701, 
+      name: 'Arms of Thaurissan', 
+      items: [58214,11684], 
+      bonus: [
+         { count: 2, stats: { armsofthaurissan: true } }
       ]
    },
 ];

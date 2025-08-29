@@ -815,7 +815,7 @@ SIM.UI = {
             if (counter == 0)
                 continue;
             if (counter >= set.bonus[0].count)
-                view.sidebar.find('#sets').append(`<a href="${WEB_DB_URL}item-set=${set.id}" class="q4">${set.name} (${counter})</a><br />`);
+                view.sidebar.find('#sets').append(`<a href="${WEB_DB_URL}itemset=${set.id}" class="q4">${set.name} (${counter})</a><br />`);
         }
 
         let count = 0;

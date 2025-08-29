@@ -1021,6 +1021,8 @@ class Player {
             bonus += this.auras.crusaderzeal.stats.moddmgdone;
         if (this.auras.obsidianhaste && this.auras.obsidianhaste.timer)
             bonus += this.auras.obsidianhaste.stats.moddmgdone;
+        if (this.auras.modrag && this.auras.modrag.timer)
+            bonus += this.auras.modrag.stats.moddmgdone;
         this.stats.moddmgdone = this.base.moddmgdone + bonus;
         this.stats.moddmgtaken = this.base.moddmgtaken + taken;
         this.mh.bonusdmg = this.mh.basebonusdmg;
@@ -1299,6 +1301,7 @@ class Player {
         if (this.auras.hategrips && this.auras.hategrips.firstuse && this.auras.hategrips.timer) this.auras.hategrips.step();
         if (this.auras.worgenmark && this.auras.worgenmark.firstuse && this.auras.worgenmark.timer) this.auras.worgenmark.step();
         if (this.auras.earthstrike && this.auras.earthstrike.firstuse && this.auras.earthstrike.timer) this.auras.earthstrike.step();
+        if (this.auras.moltenemberstone && this.auras.moltenemberstone.firstuse && this.auras.moltenemberstone.timer) this.auras.moltenemberstone.step();
         if (this.auras.roarguardian && this.auras.roarguardian.firstuse && this.auras.roarguardian.timer) this.auras.roarguardian.step();
         if (this.auras.pummeler && this.auras.pummeler.firstuse && this.auras.pummeler.timer) this.auras.pummeler.step();
         if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.step();
@@ -1379,6 +1382,7 @@ class Player {
         if (this.auras.worgenmark && this.auras.worgenmark.firstuse && this.auras.worgenmark.timer) this.auras.worgenmark.end();
         if (this.auras.gabbar && this.auras.gabbar.firstuse && this.auras.gabbar.timer) this.auras.gabbar.end();
         if (this.auras.earthstrike && this.auras.earthstrike.firstuse && this.auras.earthstrike.timer) this.auras.earthstrike.end();
+        if (this.auras.moltenemberstone && this.auras.moltenemberstone.firstuse && this.auras.moltenemberstone.timer) this.auras.moltenemberstone.end();
         if (this.auras.roarguardian && this.auras.roarguardian.firstuse && this.auras.roarguardian.timer) this.auras.roarguardian.end();
         if (this.auras.pummeler && this.auras.pummeler.firstuse && this.auras.pummeler.timer) this.auras.pummeler.end();
         if (this.auras.swarmguard && this.auras.swarmguard.firstuse && this.auras.swarmguard.timer) this.auras.swarmguard.end();
