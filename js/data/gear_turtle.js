@@ -11100,7 +11100,7 @@ var gear = {
         "dmg": 99
       }
     },
-	{
+	  {
       "name": "Bloodmoon, Sickle of the Murderous Flight",
       "hit": 2,
       "ap": 20,
@@ -11188,6 +11188,20 @@ var gear = {
       "q": 4,
       "i": 66,
       "id": 58214
+    },
+    {
+      "name": "Blackthorn's Blackjack",
+      "hit": 1,
+      "str": 12,
+      "mindmg": 92,
+      "maxdmg": 171,
+      "speed": 2.8,
+      "type": "Mace",
+      "source": "Other",
+      "phase": 7,
+      "q": 4,
+      "i": 65,
+      "id": 84600
     }
   ],
   "offhand": [
@@ -12984,6 +12998,20 @@ var gear = {
       "q": 4,
       "i": 66,
       "id": 58214
+    },
+    {
+      "name": "Blackthorn's Blackjack",
+      "hit": 1,
+      "str": 12,
+      "mindmg": 92,
+      "maxdmg": 171,
+      "speed": 2.8,
+      "type": "Mace",
+      "source": "Other",
+      "phase": 7,
+      "q": 4,
+      "i": 65,
+      "id": 84600
     }
   ],
   "twohand": [
