@@ -11202,6 +11202,21 @@ var gear = {
       "q": 4,
       "i": 65,
       "id": 84600
+    },
+    {
+      "name": "Wildhammer Stormcaller", //missing on use, unsure of the cd
+      "crit": 1,
+      "str": 7,
+      "sta": 11,
+      "mindmg": 80,
+      "maxdmg": 155,
+      "speed": 2.4,
+      "type": "Mace",
+      "source": "Other",
+      "phase": 7,
+      "q": 4,
+      "i": 70,
+      "id": 55041
     }
   ],
   "offhand": [
@@ -13012,6 +13027,21 @@ var gear = {
       "q": 4,
       "i": 65,
       "id": 84600
+    },
+    {
+      "name": "Wildhammer Stormcaller", //missing on use, unsure of the cd
+      "crit": 1,
+      "str": 7,
+      "sta": 11,
+      "mindmg": 80,
+      "maxdmg": 155,
+      "speed": 2.4,
+      "type": "Mace",
+      "source": "Other",
+      "phase": 7,
+      "q": 4,
+      "i": 70,
+      "id": 55041
     }
   ],
   "twohand": [
