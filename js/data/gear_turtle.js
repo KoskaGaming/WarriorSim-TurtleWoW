@@ -1,6 +1,20 @@
 var gear = {
   "head": [
     {
+      "name": "Wrath leggings (DPS)",
+      "ac": 441,
+      "crit": 0,
+      "hit": 2,
+      "str": 0,
+      "agi": 14,
+      "ap": 50,
+      "source": "MC",
+      "phase": 2,
+      "id": 47254,
+      "i": 68,
+      "q": 4,
+    },
+    {
       "name": "Crown of Might",
       "str": 30,
       "agi": 14,
