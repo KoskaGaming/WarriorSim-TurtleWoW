@@ -11234,6 +11234,23 @@ var gear = {
     }
   ],
   "offhand": [
+	  {
+	  "id": 11684,
+      "name": "Ironfoe",
+      "offhand": true,
+      "mindmg": 73,
+      "maxdmg": 136,
+      "speed": 2.4,
+      "type": "Mace",
+      "source": "Dungeon",
+      "phase": 1,
+      "q": 4,
+      "i": 60,
+      "proc": {
+        "ppm": 1,
+        "extra": 2
+      }
+    },
     {
       "name": "Fist of the Flamewaker",
       "offhand": true,
