@@ -1,10 +1,8 @@
 # WarriorSim-TurtleWoW
 A webapp to simulate how DPS Warrior performs with different gear, buffs, rotations, and talents.
 
-Forked from https://github.com/GuybrushGit/WarriorSim
-
 Latest commit is up live here:
-https://thrunk112.github.io/WarriorSim-TurtleWoW/
+https://koskagaming.github.io/WarriorSim-TurtleWoW/
 
 ## Self-hosting and Contributing
 
