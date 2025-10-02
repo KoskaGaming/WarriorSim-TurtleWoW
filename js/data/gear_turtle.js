@@ -10478,7 +10478,6 @@ var gear = {
     {
       "id": 11684,
       "name": "Ironfoe",
-      "Mainhand": true,
       "mindmg": 73,
       "maxdmg": 136,
       "speed": 2.4,
@@ -11237,7 +11236,6 @@ var gear = {
 	  {
 	  "id": 11684,
       "name": "Ironfoe",
-      "offhand": true,
       "mindmg": 73,
       "maxdmg": 136,
       "speed": 2.4,
