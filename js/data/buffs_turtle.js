@@ -1264,6 +1264,15 @@ var buffs = [
       armor: 250,
       minlevel: 60,
    },
+      {
+      id: 99999,
+      spellid: true,
+      name: "Eskanders",
+      iconname: "inv_axe_12",
+      group: "Esk",
+      armor: 1200,
+      minlevel: 60,
+   },
    {
       id: 17315,
       spellid: true,
